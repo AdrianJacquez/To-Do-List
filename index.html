@@ -1,49 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista De Tareas</title>
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-</head>
-<body>
-    
-
+    <link rel="stylesheet" href="estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--Este el el contenedor que encapsla todo-->
     <div class="container">
-
-    <div class="perfil">
+      <!--Aqui hay un poco de informacion como la fecha, un saludo y eslogan-->
+      <div class="perfil">
         <div id="fecha"></div>
-        <h1> Hola, Jacquez</h1>
-        <span>Cumple tus tareas</span>
-    </div>
+        <h1>Hola, Jacquez</h1>
+        <span>Cumple tus tareas <strong>HUEVON🗿</strong></span>
+      </div>
 
-
-    <div class="agregar-tarea">
-        <input type="text" id="input" placeholder=" agregar una tarea">
+      <div class="agregar-tarea">
+        <input type="text" id="input" placeholder=" agregar una tarea" />
         <i id="enter" class="fas fa-plus-circle"></i>
-    </div>
+      </div>
 
-    <div class="seccion-tarea">
+      <div class="seccion-tarea">
         <h3>Estas son tus tareas pendientes</h3>
 
-        <ul id="lista">
-            <!-- <li>
-                <i class="far fa-circle co" data="realizado" id="0"></i>
-                <p class="text"></p>
-                <i class="fas fa-trash de" data="eliminado" id="0"></i>
-            </li> -->
-            <!-- <li>
-                <i class="far fa-circle co" data="realizado" id="0"></i>
-                <p class="text-line-through">terminar la tarea de programacion</p>
-                <i class="fas fa-trash de" data="eliminado" id="0"></i>
-            </li> -->
-        </ul>
+        <ul id="lista"></ul>
+      </div>
     </div>
-    
-
-</div>
-<script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
