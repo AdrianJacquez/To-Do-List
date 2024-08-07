@@ -16,6 +16,10 @@ fecha.innerHTML = FECHA.toLocaleDateString("es-mx", {
   day: "numeric",
 });
 
+if (performance.getEntriesByType("navigation")[0].type === "reload") {
+  localStorage.clear();
+}
+
 //funcion agregar tarea
 function agregarTarea(tarea, id, realizado, eliminado) {
   if (eliminado) {
@@ -24,11 +28,12 @@ function agregarTarea(tarea, id, realizado, eliminado) {
 
   const REALIZADO = realizado ? check : uncheck;
   const LINE = realizado ? lineThrough : "";
+  const num = id + 1;
 
   const elemento = `
                     <li id="elemento">
                     <i class="far ${REALIZADO} " data="realizado" id="${id}"></i>
-                    <p class="text ${LINE}">${tarea}</p>
+                    <p class="text ${LINE}"> ${num}- ${tarea}</p>
                     <i class="fas fa-trash de" data="eliminado" id="${id}"></i>
                     </li>
                     `;
